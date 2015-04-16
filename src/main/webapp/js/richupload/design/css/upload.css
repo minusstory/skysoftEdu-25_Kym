@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.richupload * {margin:0; padding:0; font-style:normal; font-size:12px; font-family:"돋움", Dotum, "굴림", Gulim, Sans-serif}
+.richupload img, .richupload fieldset, .richupload button {border:0}
+.richupload {border:1px solid #CCCCCC; overflow:auto; width:600px; height:159px; padding:7px 6px; background: url(../img/bg_download.png) center no-repeat}
+.richupload li {list-style:none; clear:both; border-bottom:1px solid #CDCDCD; height:30px}
+.richupload li a {display:block; height:20px; font-size:11px; padding:10px 0 0 15px; color:#666666; background: url(../img/btn_download.png) right 6px no-repeat; text-decoration:none; line-height:20px}
+.richupload li a:hover {color:#F5A01A; background:#F5F5F5 url(../img/btn_download-.png) right 6px no-repeat; filter:alpha(opacity:70); opacity:0.7}
+.richupload li a:active {color:#F5A01A; background:#F5F5F5 url(../img/btn_download_.png) right 6px no-repeat; filter:alpha(opacity:70); opacity:0.7}
+
+.richdownload * {margin:0; padding:0; font-style:normal; font-size:12px; font-family:"돋움", Dotum, "굴림", Gulim, Sans-serif}
+.richdownload img, .richdownload fieldset, .richdownload button {border:0}
+.richdownload {border:1px solid #CCCCCC; overflow:auto; width:600px; height:159px; padding:7px 6px; background: url(../img/bg_download.png) center no-repeat}
+.richdownload li {list-style:none; clear:both; border-bottom:1px solid #CDCDCD; height:30px}
+.richdownload li a {display:block; height:20px; font-size:11px; padding:10px 0 0 15px; color:#666666; background: url(../img/btn_download.png) right 6px no-repeat; text-decoration:none; line-height:20px}
+.richdownload li a:hover {color:#F5A01A; background:#F5F5F5 url(../img/btn_download-.png) right 6px no-repeat; filter:alpha(opacity:70); opacity:0.7}
+.richdownload li a:active {color:#F5A01A; background:#F5F5F5 url(../img/btn_download_.png) right 6px no-repeat; filter:alpha(opacity:70); opacity:0.7}
+
+.noscript * {margin:0; padding:0; font-style:normal; font-size:12px; font-family:"돋움", Dotum, "굴림", Gulim, Sans-serif}
+.noscript img, .richdownload fieldset, .richdownload button {border:0}
+.noscript input {height:20px}
+.noscript {border:1px solid #CCCCCC; overflow:auto; width:600px; height:159px; padding:7px 6px; background: url(../img/bg_download.png) center no-repeat}
+.noscript li {list-style:none; clear:both; border-bottom:1px solid #CDCDCD; height:30px}
+.noscript li a {display:block; height:20px; font-size:11px; padding:10px 0 0 15px; color:#666666; background: url(../img/btn_download.png) right 6px no-repeat; text-decoration:none; line-height:20px}
+.noscript li a:hover {color:#F5A01A; background:#F5F5F5 url(../img/btn_download-.png) right 6px no-repeat; filter:alpha(opacity:70); opacity:0.7}
+.noscript li a:active {color:#F5A01A; background:#F5F5F5 url(../img/btn_download_.png) right 6px no-repeat; filter:alpha(opacity:70); opacity:0.7}

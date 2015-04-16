@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<richupload>
+	<license>d4818d33f0d130852f7d56c25772280e1dffd83b45ad28b1496b542b4af409f94989b577adc2eecebe567e9f8b40d844c19fc871ae73cc5fa6fc4fa18af8f3f6734e6d1c7f59f5984427e87499fb874eff145dab949b152bf78ce5a3b16eb095c725f63856d1ab7b1c4b2a2d62578eb45ce1dff0f38f09110a6ccaec5dd3b3c415e7e548bf44c893af96428640387552</license>
+	<engine name="sample">
+		<uploadPath>/template/richupload/upload.sky</uploadPath>
+		<charset>UTF-8</charset>
+		<fileTypeList>
+			<fileType>Image</fileType>
+			<fileType>Multimedia</fileType>
+			<fileType>Document</fileType>
+			<fileType>Compress</fileType>
+		</fileTypeList>
+		<maxTotalFileSize>-1</maxTotalFileSize>
+		<maxUnitFileSize>-1</maxUnitFileSize>
+		<maxFileCount>-1</maxFileCount>
+		<!-- variableList>
+			<variable name="boardSeq">1061</variable>
+			<variable name="actionMethod">write</variable>
+		</variableList -->
+		<paramName>file</paramName>
+		<previewWindow>true</previewWindow>
+		<transferWindow>true</transferWindow>
+		<uploadButton>false</uploadButton>
+		<callbackList>
+			<callback name="applicationOnCreate">richupload.oCallBackHdl.onLoad</callback>
+			<callback name="uploadOnCreate">richupload.oCallBackHdl.onUploadCreate</callback>
+			<callback name="downloadOnCreate">richupload.oCallBackHdl.onDownloadCreate</callback>
+			<callback name="fileOnAdd">richupload.oCallBackHdl.onAddFile</callback>
+			<callback name="fileOnDel">richupload.oCallBackHdl.onDelFile</callback>
+			<callback name="totalFileUploadOnComplete">richupload.oCallBackHdl.onUploadComplete</callback>
+			<callback name="unitFileUploadOnComplete">richupload.oCallBackHdl.onUploadUnitFile</callback>
+			<callback name="fileDownloadOnComplete">richupload.oCallBackHdl.onDownloadFile</callback>
+			<callback name="fileUploadOnCancel">richupload.oCallBackHdl.onUploadCancel</callback>
+		</callbackList>
+		<filterList>
+			<!-- filter>CustomFilter</filter>
+			<filter>CustomFilter2</filter -->
+		</filterList>
+	</engine>
+	<engine name="sample2">
+		<uploadPath>/js/richupload/servlet/upload.jsp</uploadPath>
+		<charset>UTF-8</charset>
+		<fileTypeList>
+			<fileType>Image</fileType>
+			<fileType>Multimedia</fileType>
+			<fileType>Document</fileType>
+			<fileType>Compress</fileType>
+		</fileTypeList>
+		<maxTotalFileSize>-1</maxTotalFileSize>
+		<maxUnitFileSize>-1</maxUnitFileSize>
+		<maxFileCount>-1</maxFileCount>
+		<variableList>
+			<variable name="boardSeq">1061</variable>
+			<variable name="actionMethod">write</variable>
+		</variableList>
+		<paramName>file</paramName>
+		<previewWindow>true</previewWindow>
+		<transferWindow>true</transferWindow>
+		<uploadButton>false</uploadButton>
+		<callbackList>
+			<callback name="applicationOnCreate">richupload.oCallBackHdl.onLoad</callback>
+			<callback name="uploadOnCreate">richupload.oCallBackHdl.onUploadCreate</callback>
+			<callback name="downloadOnCreate">richupload.oCallBackHdl.onDownloadCreate</callback>
+			<callback name="fileOnAdd">richupload.oCallBackHdl.onAddFile</callback>
+			<callback name="fileOnDel">richupload.oCallBackHdl.onDelFile</callback>
+			<callback name="totalFileUploadOnComplete">richupload.oCallBackHdl.onUploadComplete</callback>
+			<callback name="unitFileUploadOnComplete">richupload.oCallBackHdl.onUploadUnitFile</callback>
+			<callback name="fileDownloadOnComplete">richupload.oCallBackHdl.onDownloadFile</callback>
+			<callback name="fileUploadOnCancel">richupload.oCallBackHdl.onUploadCancel</callback>
+		</callbackList>
+		<filterList>
+			<!-- filter>CustomFilter</filter>
+			<filter>CustomFilter2</filter -->
+		</filterList>
+	</engine>
+	<engine name="sample3">
+		<uploadPath>/js/richupload/servlet/upload.jsp</uploadPath>
+		<charset>UTF-8</charset>
+		<fileTypeList>
+			<fileType>Image</fileType>
+			<fileType>Multimedia</fileType>
+			<fileType>Document</fileType>
+			<fileType>Compress</fileType>
+		</fileTypeList>
+		<maxTotalFileSize>-1</maxTotalFileSize>
+		<maxUnitFileSize>-1</maxUnitFileSize>
+		<maxFileCount>-1</maxFileCount>
+		<variableList>
+			<variable name="boardSeq">1061</variable>
+			<variable name="actionMethod">write</variable>
+		</variableList>
+		<paramName>file</paramName>
+		<previewWindow>true</previewWindow>
+		<transferWindow>true</transferWindow>
+		<uploadButton>false</uploadButton>
+		<callbackList>
+			<callback name="applicationOnCreate">richupload.oCallBackHdl.onLoad</callback>
+			<callback name="uploadOnCreate">richupload.oCallBackHdl.onUploadCreate</callback>
+			<callback name="downloadOnCreate">richupload.oCallBackHdl.onDownloadCreate</callback>
+			<callback name="fileOnAdd">richupload.oCallBackHdl.onAddFile</callback>
+			<callback name="fileOnDel">richupload.oCallBackHdl.onDelFile</callback>
+			<callback name="totalFileUploadOnComplete">richupload.oCallBackHdl.onUploadComplete</callback>
+			<callback name="unitFileUploadOnComplete">richupload.oCallBackHdl.onUploadUnitFile</callback>
+			<callback name="fileDownloadOnComplete">richupload.oCallBackHdl.onDownloadFile</callback>
+			<callback name="fileUploadOnCancel">richupload.oCallBackHdl.onUploadCancel</callback>
+		</callbackList>
+		<filterList>
+			<!-- filter>CustomFilter</filter>
+			<filter>CustomFilter2</filter -->
+		</filterList>
+	</engine>
+	<engine name="sample4">
+		<uploadPath>/js/richupload/servlet/upload.jsp</uploadPath>
+		<charset>UTF-8</charset>
+		<fileTypeList>
+			<fileType>Image</fileType>
+			<fileType>Multimedia</fileType>
+			<fileType>Document</fileType>
+			<fileType>Compress</fileType>
+		</fileTypeList>
+		<maxTotalFileSize>-1</maxTotalFileSize>
+		<maxUnitFileSize>-1</maxUnitFileSize>
+		<maxFileCount>-1</maxFileCount>
+		<variableList>
+			<variable name="boardSeq">1061</variable>
+			<variable name="actionMethod">write</variable>
+		</variableList>
+		<paramName>file</paramName>
+		<previewWindow>true</previewWindow>
+		<transferWindow>true</transferWindow>
+		<uploadButton>false</uploadButton>
+		<callbackList>
+			<callback name="applicationOnCreate">richupload.oCallBackHdl.onLoad</callback>
+			<callback name="uploadOnCreate">richupload.oCallBackHdl.onUploadCreate</callback>
+			<callback name="downloadOnCreate">richupload.oCallBackHdl.onDownloadCreate</callback>
+			<callback name="fileOnAdd">richupload.oCallBackHdl.onAddFile</callback>
+			<callback name="fileOnDel">richupload.oCallBackHdl.onDelFile</callback>
+			<callback name="totalFileUploadOnComplete">richupload.oCallBackHdl.onUploadComplete</callback>
+			<callback name="unitFileUploadOnComplete">richupload.oCallBackHdl.onUploadUnitFile</callback>
+			<callback name="fileDownloadOnComplete">richupload.oCallBackHdl.onDownloadFile</callback>
+			<callback name="fileUploadOnCancel">richupload.oCallBackHdl.onUploadCancel</callback>
+		</callbackList>
+		<filterList>
+			<!-- filter>CustomFilter</filter>
+			<filter>CustomFilter2</filter -->
+		</filterList>
+	</engine>
+	<fileTypeList>
+		<fileType name="Image">
+			<fileExt>bmp</fileExt>
+			<fileExt>gif</fileExt>
+			<fileExt>ico</fileExt>
+			<fileExt>jpg</fileExt>
+			<fileExt>png</fileExt>
+		</fileType>
+		<fileType name="Compress">
+			<fileExt>cab</fileExt>
+			<fileExt>gz</fileExt>
+			<fileExt>rar</fileExt>
+			<fileExt>rar</fileExt>
+			<fileExt>tar</fileExt>
+			<fileExt>tgz</fileExt>
+			<fileExt>zip</fileExt>
+		</fileType>
+		<fileType name="Document">
+			<fileExt>doc</fileExt>
+			<fileExt>docx</fileExt>
+			<fileExt>hwp</fileExt>
+			<fileExt>pdf</fileExt>
+			<fileExt>ppt</fileExt>
+			<fileExt>pptx</fileExt>
+			<fileExt>xls</fileExt>
+			<fileExt>xlsx</fileExt>
+			<fileExt>txt</fileExt>
+			<fileExt>rtf</fileExt>
+			<fileExt>csv</fileExt>
+		</fileType>
+		<fileType name="Multimedia">
+			<fileExt>asf</fileExt>
+			<fileExt>avi</fileExt>
+			<fileExt>mkv</fileExt>
+			<fileExt>mov</fileExt>
+			<fileExt>mp3</fileExt>
+			<fileExt>mp4</fileExt>
+			<fileExt>mpeg</fileExt>
+			<fileExt>mpg</fileExt>
+			<fileExt>ogg</fileExt>
+			<fileExt>ra</fileExt>
+			<fileExt>ram</fileExt>
+			<fileExt>rm</fileExt>
+			<fileExt>wav</fileExt>
+			<fileExt>wma</fileExt>
+			<fileExt>wmv</fileExt>
+			<fileExt>swf</fileExt>
+		</fileType>
+		<fileType name="CGI">
+			<fileExt name="asdfa">html</fileExt>
+			<fileExt>htm</fileExt>
+			<fileExt>php</fileExt>
+			<fileExt>php3</fileExt>
+			<fileExt>php4</fileExt>
+			<fileExt>php5</fileExt>
+			<fileExt>do</fileExt>
+			<fileExt>jsp</fileExt>
+			<fileExt>asp</fileExt>
+			<fileExt>cgi</fileExt>
+			<fileExt>js</fileExt>
+			<fileExt>vb</fileExt>
+			<fileExt>inc</fileExt>
+			<fileExt>pl</fileExt>
+		</fileType>
+		<fileType name="Executable">
+			<fileExt>exe</fileExt>
+			<fileExt>com</fileExt>
+			<fileExt>bat</fileExt>
+		</fileType>
+	</fileTypeList>
+	<filterList>
+		<filter name="CustomFilter" ref="kr.co.skysoft.richupload.filter.CustomFilter">
+			<param name="customParam">10</param>
+		</filter>
+		<filter name="CustomFilter2" ref="kr.co.skysoft.richupload.filter.CustomFilter2">
+			<param name="customParam1">10</param>
+			<param name="customParam2">testParam</param>
+		</filter>
+	</filterList>
+</richupload>

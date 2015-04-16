@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/* 초기세팅 */
+#calendar * {margin:0; font-family:"돋움", "굴림", Arial, sans-serif, verdana, AppleGothic; font-size:10px; color:#333}
+#calendar img, #calendar fieldset {border:0}
+#calendar select, #calendar input, #calendar li img, #calendar td * {vertical-align:middle}
+#calendar a {color:#666; text-decoration:none}
+#calendar a:hover{text-decoration:none}
+#calendar a:link, #calendar a:visited, #calendar a:active, #calendar a:hover {color:#444}
+#calendar button {border:none; background:none; font-size:1.4em; text-indent:-5000px; cursor:pointer}
+
+#calendar caption {display:none}
+
+/* 콘텐츠 */
+#calendar {position:relative; left:0; top:-23px; margin:0 auto; width:100%}
+#calendar table {width:100%; border:none; border-bottom:1px solid #aaa; border-right:1px solid #aaa; border-spacing:0; background-color:#fff; color:#666}
+#calendar table th, #calendar table td {border:none; text-align:left; vertical-align:top}
+#calendar table tbody {display:none}
+#calendar table thead th {background:#545765; height:30px; font-size:1.3em; color:#e2e3e4; text-align:center; vertical-align:middle; border:none;}
+#calendar table tbody td {position:relative; padding:0 3px; width:14%; height:66px; border-top:1px solid #aaa; border-left:1px solid #aaa}
+#calendar table tbody td.active {width:14%; height:14%; border:2px solid #f58026; font-weight:bold; margin:-1px}
+#calendar table tbody td.selected {width:14%; height:14%; border:3px solid #f58026; background:#fdf2da; margin:-1px}
+#calendar table tbody td.sun {border-left:1px solid #ccc}
+#calendar th.sun {color:#dea0a5}
+#calendar th.sat {color:#9ebeff}
+#calendar td.sun button {color:#d44757 !important}
+#calendar td.sat button {color:#69f !important}
+#calendar td.holi, #calendar td.holi button, #calendar td.holi sub {color:#d44757 !important}
+#calendar td.prev.sat button, #calendar td.next.sat button {color:#9ebeff !important}
+#calendar td.prev.sun button, #calendar td.next.sun button, #calendar td.prev.holi button, #calendar td.next.holi button, #calendar td.prev.sun .name, #calendar td.next.sun .name, #calendar td.prev.holi .name, #calendar td.next.holi .name {color:#de9fa8 !important}
+#calendar td.today button {color:#7e39cc; font-weight:bold; font-style: italic}
+#calendar table td button {width:20x; height:20px; text-indent:0; font-family:Arial, sans-serif, verdana, AppleGothic; font-size:1.1em; text-align:center; vertical-align:middle}
+#calendar table td button sub {display:none;}
+#calendar table tbody td .date {font-weight:normal; font-style:normal; color:#000; text-decoration:none}
+#calendar table tbody td .content {position:relative; left:0; top:9px; display:block; overflow:auto; margin:0; width:100%; height:55%; font-size:0.9em; line-height:9px;}
+#calendar table tbody td .name {
+	display:block; position:absolute; right:2px; top:10px; width:95%; height:20px; line-height:20px; text-align:right; vertical-align:middle; font-size:1em; letter-spacing:-1px;
+	overflow-x:hidden !important; white-space:nowrap !important; text-overflow:ellipsis !important; -o-text-overflow:ellipsis !important; -ms-text-overflow:ellipsis !important
+}
+#calendar tbody td.prev, #calendar tbody td.next {background-color:#eee}
+#calendar tbody td.prev button, #calendar tbody td.next button {color:#999}
+#calendar tbody td.prev button:hover, #calendar tbody td.prev button.hover, #calendar tbody td.next button:hover, #calendar tbody td.next button.hover {text-decoration:underline; border:0 !important; background:none !important}
+#calendar tfoot td {border-top:1px solid #ccc; height:22px; background: url("../img/foot_bg.gif") no-repeat; font-size:11px; color:#f58026; text-align:left; letter-spacing:-1px; padding-left:5px}
+#calendar tfoot td span {display:block; position:relative}
+#calendar tfoot td button {position:absolute; right:3px; bottom: 0px; background: url("../img/btn_del.gif") left no-repeat; width:25px; height:14px; text-indent:-5000px}
+#calendar div.caption, x:-moz-any-link, x:default {height:35px}
+#calendar tfoot td, x:-moz-any-link, x:default {height:23px}
+#calendar tfoot td img {vertical-align:middle; position:relative; top:-1px}
+#calendar div.caption {position:relative; left:100%; margin-left:-176px; padding-left:10px; width:166px; height:35px; background: url("../img/head_bg.gif") no-repeat}
+#calendar div.caption span, #calendar div.caption button.today {float:left; display:inline; margin-top:8px}
+#calendar div.caption span {position:relative; width:60px; height:17px; background: url("../img/year_bg.gif") no-repeat; text-align:center; font-size:11px; padding-top:3px}
+#calendar div.caption span button {position:absolute; right:19px; top:3px; background: url("../img/btn_next.gif") no-repeat; width:10px; height:6px}
+#calendar div.caption span button.prev-year, #calendar div.caption span button.prev-month {top:10px; background: url("../img/btn_prev.gif") no-repeat}
+#calendar div.caption span button:hover, #calendar div.caption span button:focus {background-position:0 -6px}
+#calendar div.caption span.month-box {width:48px; background: url("../img/month_bg.gif") no-repeat}
+#calendar div.caption span input {width:28px; height:15px; font-size:11px; padding-left:0px; border:none; background:none; margin-right:11px; margin-top:-4px; *margin-top:-11px; padding-top:2px; font-size:1.1em}
+#calendar div.caption span.month-box input {width:16px; padding-left:4px;}
+#calendar div.caption button.today {width:26px; height:15px; background: url("../img/btn_today.gif") no-repeat; margin:10px 0 0 3px}
+#calendar button.close {position:absolute; right:7px; top:7px; width:6px; height:5px; background: url("../img/btn_close.gif") no-repeat}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	#calendar tfoot td button {top:-1px;}
+;}
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0)
+{
+head~body #calendar tbody td.prev, #calendar tbody td.next {background: url("../img/cell_bg.gif") 1px 1px no-repeat}
+}

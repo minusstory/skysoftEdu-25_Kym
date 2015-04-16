@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/* 기본세팅 */
+html, body {height:100%;}
+body {font-family:Gulim, "굴림", Dotum, "돋움", Arial, Verdana, sans-serif; font-size:12px; color:#444;}
+* {margin:0; padding:0;}
+select, textarea {border:1px solid #b5b5b5}
+textarea {font-family:Gulim, "굴림", Dotum, "돋움", Arial, Verdana, sans-serif; font-size:12px; color:#444;}
+input {vertical-align:middle;}
+div, table, th, td {border-collapse:collapse;}
+img, fieldset {border:0;}
+ul, ol, li {list-style:none;}
+li *,td *,dd *,fieldset * {vertical-align:middle;}
+h1, h2, h3, h4, h5, h6 {font-size:12px}
+hr {display:none;}
+button {cursor:pointer;}
+caption, legend {position:relative; top:0; left:0; width:0; height:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;}
+legend {position:absolute}
+a {color:#444; text-decoration:none;}
+a:hover {text-decoration:underline;}
+a:link, a:active, a:hover {color:#444;}
+a:visited,#content tr.visited a {color:#8c53b2;}
+select {font-size:12px;}
+
+/* display */
+.hid {position:absolute; left:0; top:-50000px;}
+.clear {clear:both;}
+
+/* margin */
+.mt5 {margin-top:5px !important;}
+.mt10 {margin-top:10px !important;}
+.mt15 {margin-top:15px !important;}
+.mt20 {margin-top:20px !important;}
+.mt30 {margin-top:30px !important;}
+
+.mb00 {margin-bottom:0 !important;}
+.mb05 {margin-bottom:5px !important;}
+.mb10 {margin-bottom:10px !important;}
+.mb15 {margin-bottom:15px !important;}
+.mb17 {margin-bottom:17px !important;}
+.mb20 {margin-bottom:20px !important;}
+.mb30 {margin-bottom:30px !important;}
+.mb50 {margin-bottom:50px !important;}
+
+/* padding */
+.pl0 {padding-left:0px !important;}
+.pl5 {padding-left:5px !important;}
+.pl7 {padding-left:7px !important;}
+.pl10 {padding-left:10px !important;}
+.pl15 {padding-left:15px !important;}
+.pl20 {padding-left:20px !important;}
+.pl08 {padding-left:8px !important;}
+
+/* align */
+.al {text-align:left !important;}
+.ac {text-align:center !important;}
+.ar {text-align:right !important;}
+.am {vertical-align:middle !important;}
+
+/* font weight */
+.b {font-weight:bold;}
+.nb {font-weight:normal;}
+
+/* float */
+.fl {float:left; display:inline;}
+.fr {float:right; display:inline;}
+
+.lineh {line-height:1.5;}
+
+/* #fakeMenu {position:absolute; top:10px; right:0px; border:4px solid #2ca94d; padding:5px 10px; width:690px; height:70px; background:#f2f2f2; font-size:12px; font-weight:bold; color:#444; font-family:"맑은 고딕", "돋움"; overflow-x:hidden; overflow-y:auto; z-index:110;}
+#fakeMenu a {margin-right:20px; color:#1469b3;}
+#fakeMenu span {position:relative; display:block; padding:0 0 10px 130px; border-bottom:1px dashed #666;}
+#fakeMenu span strong {position:absolute; margin-left:-120px; top:0;}
+#fakeMenu button {position:absolute; right:5px; top:5px; overflow:visible} */

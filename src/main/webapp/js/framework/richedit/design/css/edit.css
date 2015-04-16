@@ -1,0 +1,22 @@
+@charset "utf-8";
+* {padding:0; margin:0}
+body {word-break:break-all; word-wrap:break-word; margin:0; padding:0; font-family:"맑은 고딕", Gulim, "굴림"; font-size:12px; line-height:1.2; color:#777777}
+select, textarea { border:1px solid #B7B6B6;background:#FFF; vertical-align:middle;}
+strong,b { font-weight:bold;}
+img, fieldset { border:0 }
+select, input, li img { vertical-align:middle;}
+/*ul, li, ol {margin:0 0 0 10; list-style-position:inside}*/
+ul, li, ol {list-style-position:inside}
+legend { display:none;}
+a {color:#666; text-decoration:none;}
+a:hover{text-decoration:underline}
+a:link, a:visited, a:active, a:hover {color:#666}
+
+.table_form {width:90%; border-bottom:1px solid #cccccc; border-top:1px solid #cccccc; border-right:1px solid #cccccc}
+.table_form td {border:1px solid #cccccc; border-bottom:0; border-top:0; border-right:0}
+.border_bold  {width:90%; border-bottom:3px solid #cccccc; border-top:3px solid #cccccc; border-right:3px solid #cccccc; border-left:2px solid #cccccc}
+
+/*richedit edit css 필수 사항*/
+.rich_layout_form {width:90%; border-bottom:1px dashed #cccccc; border-top:1px dashed #cccccc; border-right:1px dashed #cccccc}
+.rich_layout_form td {border:1px dashed #cccccc; border-bottom:0; border-top:0; border-right:0}
+.rich_layout_form .rich_dashed {border-bottom:1px dashed #cccccc}

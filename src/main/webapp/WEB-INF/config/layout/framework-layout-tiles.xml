@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+    <!-- 단순히 jsp를 호출해서 보여 줄 경우 사용함  -->
+	<definition name="frameworkSimpleJsp" template="/WEB-INF/jsp/framework/layout/FrameworkSimpleJspLayout.jsp">
+		<put-attribute name="content" value="" />
+	</definition>
+
+	<!-- validate 처리를 위한 jsp 페이지  -->
+	<definition name="framework/common/validator.jsp" extends="frameworkSimpleJsp">
+		<put-attribute name="content" value="/WEB-INF/jsp/framework/common/validator.jsp" />
+	</definition>
+
+	<!-- 경고띠우고 팝업 닫는 처리를 위한 jsp 페이지  -->
+	<definition name="framework/common/closePopupWindow.jsp" extends="frameworkSimpleJsp">
+		<put-attribute name="content" value="/WEB-INF/jsp/framework/common/closePopupWindow.jsp" />
+	</definition>
+
+	<!-- Alert Message 처리를 위한 jsp 페이지  -->
+	<definition name="framework/common/goAndAlertMessage.jsp" extends="frameworkSimpleJsp">
+		<put-attribute name="content" value="/WEB-INF/jsp/framework/common/goAndAlertMessage.jsp" />
+	</definition>
+
+</tiles-definitions>

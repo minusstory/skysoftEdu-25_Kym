@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>RichUpload 고도화 (웹접근성 1차 HTML)</title>
+<link href="design/css/upload.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="/js/framework/latte/latte.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/richupload2.js"></script>
+<script type="text/javascript" charset="utf-8">
+var uploadType;
+
+function uploadComplete(nUpload, msg) {
+	var txt	= '['+nUpload._oAttr.id+' 업로드 완료]';
+	var modeType	= uploadType.split(/-/);
+console.log("왜 기본 등록된 파일을 제외한 다른 파일을 올리면 여기에 안들어 올까나 ? ");
+	if (modeType[0] == 'sequential') {
+
+		// 업로드 계속 진행 확인
+		if (!confirm(txt+"\n업로드를 계속 진행하시겠습니까?")) return false;
+	}
+	else alert(txt);
+}
+
+function submitForm(oResult) {
+	var txt	= '['+uploadType+" upload complete]\n";
+	latte.iter(oResult, function (result, nID) { txt += nID+' : 전송 '+(result?'성공':'실패')+"\n"; });
+	txt += "\n\n 폼 전송을 하시겠습니까?";
+
+	// 이곳에서 form을 서버로 전송 한다
+	if (confirm(txt)) window.document.forms[0].submit();
+}
+
+function checkFormValidation() {
+	switch (uploadType) {
+
+		// 순차 업로드
+		case 'sequential':
+			richupload.upload(submitForm, 'sequential');
+		break;
+		case 'sequential-start':
+			richupload.upload(submitForm, 'sequential-start', 'upload-en_US');
+		break;
+		case 'sequential-end':
+			richupload.upload(submitForm, 'sequential-end', 'upload-en_US');
+		break;
+		case 'sequential-fix':
+			richupload.upload(submitForm, 'sequential-fix', ['upload-en_US','upload-ko_KR']);
+		break;
+
+		// 비순차 업로드
+		case 'multiple':
+			richupload.upload(submitForm, 'multiple');
+		break;
+		case 'multiple-start':
+			richupload.upload(submitForm, 'multiple-start', 'upload-en_US');
+		break;
+		case 'multiple-end':
+			richupload.upload(submitForm, 'multiple-end', 'upload-en_US');
+		break;
+		case 'multiple-fix':
+			richupload.upload(submitForm, 'multiple-fix', ['upload-en_US','upload-ko_KR']);
+		break;
+	}
+
+	// 이곳에서는 form을 서버로 전송하지 않음
+	return false;
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+document.write('[Agent] '+navigator.userAgent+']<br/>');
+document.write('[Version] richupload v'+richupload.VERSION+' - latte v'+latte.ver+'<br/>');
+</script>
+<br/>
+<form method="post" onsubmit="return checkFormValidation()">
+<table style="border:3px dashed" width="1200">
+	<tr>
+		<td style="border-right:3px dashed; vertical-align:top;">
+			추가된 파일 목록 : <input type="text" style="width:500px" id="addFileList"/><br />
+			삭제된 파일 목록 : <input type="text" style="width:500px" id="delFileList"/><br />
+			<br /><br /><strong>RichUpload ko_KR------------------------</strong><br/>
+			<div class="richupload" id="upload-ko_KR" engine="sample" confurl="/js/richupload/js/config.xml" swfurl="/js/richupload/js/richupload2.swf" swfver="10.2.152.26" addfile="addFileList" delfile="delFileList" submit="uploadComplete">
+				<ul>
+					<li>
+						<a
+							class="richfileitem"
+							href="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							target="_blank"
+							filename="이미지파일.jpg"
+							fileseq="3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							filetype="jpg"
+							filesize="4762"
+							fileurl="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							thumbnail="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+						>이미지파일.jpg</a>
+					</li>
+					<li>
+						<a
+							class="richfileitem"
+							href="/richupload/uploadFile/2354962b-07f6-41a4-ba19-edd849382051.zip"
+							target="_blank"
+							filename="압축파일.zip"
+							fileseq="2354962b-07f6-41a4-ba19-edd849382051.zip"
+							filetype="zip"
+							filesize="3566678"
+							fileurl="/richupload/uploadFile/2354962b-07f6-41a4-ba19-edd849382051.zip"
+							thumbnail=""
+						>이미지파일.jpg</a>
+					</li>
+				</ul>
+			</div>
+
+			<br/><br/><strong>RichUpload en_US----------------------</strong><br/>
+			<div class="richupload" id="upload-en_US" engine="sample2" confurl="/js/richupload/js/config.xml" confchar="UTF-8" locale="en_US" style="width:600px;height:188px" submit="uploadComplete">
+				<ul>
+					<li>
+						<a
+							class="richfileitem"
+							href="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							target="_blank"
+							filename="이미지파일.jpg"
+							fileseq="3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							filetype="jpg"
+							filesize="4762"
+							fileurl="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							thumbnail="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+						>이미지파일.jpg</a>
+					</li>
+					<li>
+						<a
+							class="richfileitem"
+							href="/richupload/uploadFile/2354962b-07f6-41a4-ba19-edd849382051.zip"
+							target="_blank"
+							filename="압축파일.zip"
+							fileseq="2354962b-07f6-41a4-ba19-edd849382051.zip"
+							filetype="zip"
+							filesize="3566678"
+							fileurl="/richupload/uploadFile/2354962b-07f6-41a4-ba19-edd849382051.zip"
+							thumbnail=""
+						>이미지파일.jpg</a>
+					</li>
+				</ul>
+			</div>
+		</td>
+		<td style="vertical-align:top;">
+			<input type="submit" value="richupload.upload(submitForm, 'sequential')" onclick="uploadType='sequential'" /><br/>
+			<input type="submit" value="richupload.upload(submitForm, 'sequential-start', 'upload-en_US')" onclick="uploadType='sequential-start'" /><br/>
+			<input type="submit" value="richupload.upload(submitForm, 'sequential-end', 'upload-en_US')" onclick="uploadType='sequential-end'" /><br/>
+			<input type="submit" value="richupload.upload(submitForm, 'sequential-fix', ['upload-en_US','upload-ko_KR'])" onclick="uploadType='sequential-fix'" /><br/>
+			<br />
+			<input type="submit" value="richupload.upload(submitForm, 'multiple')" onclick="uploadType='multiple'" /><br/>
+			<input type="submit" value="richupload.upload(submitForm, 'multiple-start', 'upload-en_US')" onclick="uploadType='multiple-start'" /><br/>
+			<input type="submit" value="richupload.upload(submitForm, 'multiple-end', 'upload-en_US')" onclick="uploadType='multiple-end'" /><br/>
+			<input type="submit" value="richupload.upload(submitForm, 'multiple-fix', ['upload-en_US','upload-ko_KR'])" onclick="uploadType='multiple-fix'" /><br/>
+		</td>
+	</tr>
+</table>
+</form>
+<br/><br/>
+<table style="border:3px dashed" width="1200">
+	<tr>
+		<td>
+			<strong>RichDownload ko_KR----------------------</strong><br/>
+			<div class="richdownload" id="fileDownload1" engine="sample3" confurl="/js/richupload/js/config.xml" swfurl="/js/richupload/js/richupload2.swf" swfver="10.2.152.26" >
+				<ul>
+					<li>
+						<a
+							class="richfileitem"
+							href="/richupload/uploadFile/adad9385-1997-4365-ae8a-f2292554c7de.pdf"
+							target="_blank"
+							filename="RichUpload-설치지침서.pdf"
+							fileseq="adad9385-1997-4365-ae8a-f2292554c7de.pdf"
+							filetype="pdf"
+							filesize="4762"
+							fileurl="/richupload/uploadFile/adad9385-1997-4365-ae8a-f2292554c7de.pdf"
+							thumbnail="/richupload/uploadFile/adad9385-1997-4365-ae8a-f2292554c7de.pdf"
+						>RichUpload-설치지침서.pdf</a>
+					</li>
+					<li>
+						<a
+							class="richfileitem"
+							href="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							target="_blank"
+							filename="이미지파일.jpg"
+							fileseq="3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							filetype="jpg"
+							filesize="4762"
+							fileurl="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							thumbnail="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+						>이미지파일.jpg</a>
+					</li>
+					<li>
+						<a
+							class="richfileitem"
+							href="/richupload/uploadFile/2354962b-07f6-41a4-ba19-edd849382051.zip"
+							target="_blank"
+							filename="압축파일.zip"
+							fileseq="2354962b-07f6-41a4-ba19-edd849382051.zip"
+							filetype="zip"
+							filesize="3566678"
+							fileurl="/richupload/uploadFile/2354962b-07f6-41a4-ba19-edd849382051.zip"
+							thumbnail=""
+						>이미지파일.jpg</a>
+					</li>
+				</ul>
+			</div>
+
+			<br/><br/><strong>RichDownload en_US----------------------</strong><br/>
+			<div class="richdownload" id="fileDownload2" engine="sample4" confurl="/js/richupload/js/config.xml" confchar="UTF-8" locale="en_US" style="width:600px;height:188px" submit="uploadComplete">
+				<ul>
+					<li>
+						<a
+							class="richfileitem"
+							href="/richupload/uploadFile/adad9385-1997-4365-ae8a-f2292554c7de.pdf"
+							target="_blank"
+							filename="RichUpload-설치지침서.pdf"
+							fileseq="adad9385-1997-4365-ae8a-f2292554c7de.pdf"
+							filetype="pdf"
+							filesize="4762"
+							fileurl="/richupload/uploadFile/adad9385-1997-4365-ae8a-f2292554c7de.pdf"
+							thumbnail="/richupload/uploadFile/adad9385-1997-4365-ae8a-f2292554c7de.pdf"
+						>RichUpload-설치지침서.pdf</a>
+					</li>
+					<li>
+						<a
+							class="richfileitem"
+							href="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							target="_blank"
+							filename="이미지파일.jpg"
+							fileseq="3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							filetype="jpg"
+							filesize="4762"
+							fileurl="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+							thumbnail="/richupload/uploadFile/3336d2f7-2210-4d8f-89af-d207107515bf.jpg"
+						>이미지파일.jpg</a>
+					</li>
+					<li>
+						<a
+							class="richfileitem"
+							href="/richupload/uploadFile/2354962b-07f6-41a4-ba19-edd849382051.zip"
+							target="_blank"
+							filename="압축파일.zip"
+							fileseq="2354962b-07f6-41a4-ba19-edd849382051.zip"
+							filetype="zip"
+							filesize="3566678"
+							fileurl="/richupload/uploadFile/2354962b-07f6-41a4-ba19-edd849382051.zip"
+							thumbnail=""
+						>이미지파일.jpg</a>
+					</li>
+				</ul>
+			</div>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
